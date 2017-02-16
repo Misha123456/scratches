@@ -1,0 +1,10 @@
+$userName=mikhail_asadchy@epam.com
+$defaultPassword=113355
+INSERT_UPDATE Customer;groups(uid)[default=customergroup];uid[unique=true];name;customerId;password[default=$defaultPassword]
+;;$userName;$userName;$userName;
+
+$segmentCode=segment1
+INSERT_UPDATE CxSegment;code[unique=true];
+;$segmentCode;
+INSERT_UPDATE CxUserToSegment;segment(code)[unique=true];user(uid)[unique=true];affinity;
+;$segmentCode;$userName;1;
